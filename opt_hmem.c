@@ -1,9 +1,3 @@
-// CS3650 CH02 starter code
-// Spring 2019
-//
-// Author: Nat Tuck
-//
-// Once you've read this, you're done with the simple allocator homework.
 /*
 #include <stdint.h>
 #include <sys/mman.h>
