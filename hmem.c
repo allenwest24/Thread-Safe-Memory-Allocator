@@ -1,10 +1,3 @@
-// CS3650 CH02 starter code
-// Spring 2019
-//
-// Author: Nat Tuck
-//
-// Once you've read this, you're done with the simple allocator homework.
-
 #include <stdint.h>
 #include <sys/mman.h>
 #include <assert.h>
@@ -128,7 +121,7 @@ hmalloc(size_t usize)
         alloc_size = CELL_SIZE;
     }
 
-    // TODO: Handle large allocations.
+    // Handles large allocations.
     if (alloc_size > CHUNK_SIZE) {
         void* addr = mmap(0, alloc_size, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
         *((int64_t*)addr) = alloc_size;
@@ -163,7 +156,6 @@ hfree(void* addr)
     int64_t size = *((int64_t*) cell);
 
     if (size > CHUNK_SIZE) {
-        //nu_free_chunks += 1;
         munmap((void*) cell, size);
     }
     else {
