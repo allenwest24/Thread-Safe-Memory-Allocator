@@ -8,14 +8,6 @@ two allocators. One that is not thread safe and one that is.
     Implementation of realloc.
     Edited hmalloc.
 
-Included is a graph.png showing my results.
-
-Included is a report.txt with:
-    ASCII art table of results
-    Information on my test hardware / OS.
-    Discussion of my strategy for creating a fast allocator.
-    Discussion of my results
-
 Features:
     My par_malloc is faster than sys_malloc.
     My par_malloc correctly handles coalescing when malloc and free occur in the same thread.
